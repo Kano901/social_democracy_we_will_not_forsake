@@ -20,7 +20,7 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-<span style="color: #c00000;">**SPD**</span> position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
+<span style="color: #20a36d;">**PSL "Piast"**</span> position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
 [? if in_weimar_coalition and not in_social_catholic_coalition and not in_social_liberal_coalition and spd_in_government: <span style="color: #000000;">We</span><span style="color: #DD0000;">im</span><span style="color: #FFCC00;">ar</span> Coalition ?][? if in_social_catholic_coalition and spd_in_government: <span style="color: #c00000;">Social</span>-[? if not stegerwald_path: <span style="color: #000000;">Catholic</span>?][? if stegerwald_path: <span style="color: #000000;">Christian</span>?] Coalition ?][? if in_social_liberal_coalition and spd_in_government: <span style="color: #c00000;">Ketchup</span> and [? if not lvp_formed: <span style="color: #D3C24D;">Mustard</span>?][? if lvp_formed: <span style="color: #FFCC00;">Mustard</span>?] Coalition ?][? if in_grand_coalition and spd_in_government: [? if not in_wholesome_coalition: Grand Coalition?][? if in_wholesome_coalition: Wholesome Coalition?] ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: <span style="color: #c00000;">**SPD**</span> majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if bruning_time and spd_toleration: Bruning's reichstag backing: [+ bruning_coalition +]% ?]
@@ -55,7 +55,7 @@ Reichstag composition:
 # 1928: 30, 1930: 25, 1932: 22
 
 [? if dnef_formed: <span class="tooltip-text" title="German National Unity Front" style="color: #BFC8CC;">**DNEF**</span>: [+ dnef_r +]% ?]
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]%
+<span class="tooltip-text" title="Polish People's Party Piast" style="color: #20a36d;">**PSL "Piast"**</span>: [+ piast_r +]%
 [? if sapd_formed and sapd_r > 0: <span class="tooltip-text" title="Socialist Workers' Party of Germany" style="color: #9B0000;">**SAPD**</span>: [+ sapd_r +]% ?]
 # 1928: 15, 1930: 15, 1932: 
 [? if started: [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party + Bavarian People's Party"><span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span></span>?]?][? if not started: <span class="tooltip-text" title="Center Party + Bavarian People's Party"><span style="color: #000000;">**Z**</span> + <span style="color: #A2D8E0;">**BVP**</span></span> ?]: [+ z_r +]%
@@ -79,7 +79,7 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 **Others**: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if piast_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -180,7 +180,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if dnef_formed: <span class="tooltip-text" title="German National Unity Front" style="color: #BFC8CC;">**DNEF**</span>: [? if dnef_ideology == "Left": Syncretic?][? if dnef_ideology == "Moderate": Syncretic?][? if dnef_ideology == "Right": Syncretic?] ([+ dnef_leader +])?]
 
-[? if not ddp_name: UNINITIALIZED ?][? if ddp_name != 0: [? if z_party_name != "CVP": <span class="tooltip-text" title="Center Party" style="color: #000000;">**[+ z_party_name +]**</span>?][? if z_party_name == "CVP": <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**[+ z_party_name +]**</span>?]: [? if not cvp_formed: [? if z_ideology == "Right" and not cvp_kvp_formed and z_leader != "Joos" and z_leader != "Bracht": Center to Center-Right?][? if z_ideology == "Right" and cvp_kvp_formed: Christian Democracy?][? if z_leader == "Joos": Center-Left to Center-Right?][? if z_leader == "Kaiser": Center-Left to Center?][? if z_leader == "Bracht": Catholic Conservatism?]?][? if cvp_formed: [? if cvp_leader == "Lambach": Christian Corporatism?][? if cvp_leader == "Stegerwald": Paternalistic Conservatism?][? if cvp_leader == "Gereke": Agrarian Conservatism?][? if cvp_leader == "Westarp" or cvp_leader == "Goerdeler" or cvp_leader = "Lejeune-Jung" or cvp_leader == "Lettow-Vorbeck": National Conservatism?][? if cvp_leader == "Adenauer": Christian Democracy?][? if cvp_leader == "Bolz": Christian Conservatism?][? if cvp_leader == "Treviranus": Tory Democracy?]?] ([? if not cvp_formed:[+ z_leader +]?][? if cvp_formed:[+ cvp_leader +]?])?]
+[? if not kprp_name: UNINITIALIZED ?][? if kprp_name != 0: [? if kprp_party_name != "KPP": <span class="tooltip-text" title="Communist Party of Poland" style="color: #740e0e;">**[+ kprp_party_name +]**</span>?][? if z_party_name == "KPRP": <span class="tooltip-text" title="Communist Worker's Party of Poland" style="color: #740e0e;">**[+ kprp_party_name +]**</span>?]: [? if not cvp_formed: [? if z_ideology == "Right" and not cvp_kvp_formed and z_leader != "Joos" and z_leader != "Bracht": Center to Center-Right?][? if z_ideology == "Right" and cvp_kvp_formed: Christian Democracy?][? if z_leader == "Joos": Center-Left to Center-Right?][? if z_leader == "Kaiser": Center-Left to Center?][? if z_leader == "Bracht": Catholic Conservatism?]?][? if cvp_formed: [? if cvp_leader == "Lambach": Christian Corporatism?][? if cvp_leader == "Stegerwald": Paternalistic Conservatism?][? if cvp_leader == "Gereke": Agrarian Conservatism?][? if cvp_leader == "Westarp" or cvp_leader == "Goerdeler" or cvp_leader = "Lejeune-Jung" or cvp_leader == "Lettow-Vorbeck": National Conservatism?][? if cvp_leader == "Adenauer": Christian Democracy?][? if cvp_leader == "Bolz": Christian Conservatism?][? if cvp_leader == "Treviranus": Tory Democracy?]?] ([? if not cvp_formed:[+ z_leader +]?][? if cvp_formed:[+ cvp_leader +]?])?]
 
 [? if not ddp_name and not lvp_formed: UNINITIALIZED ?][? if not lvp_formed and ddp_name != 0 and not dstp_dnef: [? if ddp_name = "DDP" and ddp_ideology == "Right":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Classical Liberalism ([+ ddp_leader +])?][? if ddp_name = "DDP" and ddp_ideology == "Moderate":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Left Liberalism ([+ ddp_leader +])?][? if ddp_name = "DDP" and ddp_ideology == "Left":<span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Progressive Liberalism ([+ ddp_leader +])?]?][? if not lvp_formed and ddp_name = "DDP" and dstp_dnef: <span class="tooltip-text" title="German Democratic Party" style="color: #D3C24D;">**[+ ddp_name +]**</span>: Liberal Corporatism ([+ ddp_leader +])?]
 
@@ -238,17 +238,23 @@ Economic growth: [+ economic_growth_2 +]%
 
 [? if nvf_exist: <span class="tooltip-text" title="National People's Front" style="color: #142e20;">**NVF**</span>: none ?]
 
-= Internal Factions of the <span style="color: #c00000;">**SPD**</span>
+= Internal Factions of the <span style="color: #20a36d;">**PSL "Piast"**</span>
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #dd9e17;">Left</span></span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #3ca338;">Center</span></span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #225f3a;">Right</span></span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+[? if neorevisionism: {!<span class="tooltip-text" title="TBA">Neorevisionist</span>!} strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
-[? if neorevisionism: {!<span class="tooltip-text" title="Neorevisionists focus on defending the republic and expanding democracy, supporting new propaganda methods and extra-parliamentary action">Neorevisionist</span>!} strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+@government
+
+= Government
+
+Naczelnik
+
+Premier
 
 @paramilitaries
 on-arrival: {!
@@ -328,13 +334,23 @@ Q.socialism_disp = Math.floor(Q.socialism);
 
 [? if dnef_formed: <span style="color: #BFC8CC;">**DNEF**</span>: [+ dnef_votes +]% ?]
 
-<span style="color: #c00000;">**SPD**</span>: [+ spd_votes +]%
+<span style="color: #20a36d;">**PSL "Piast"**</span>: [+ piast_votes +]%
 
-[? if sapd_formed: <span style="color: #9B0000;">**SAPD**</span>: [+ sapd_votes +]% ?]
+<span style="color: #740e0e;">**[+ kprp_party_name +]**</span>: [+ z_votes +]%
 
-<span style="color: #000000;">**[+ z_party_name +]**</span> + <span style="color: #A2D8E0;">**BVP**</span>: [+ z_votes +]%
+[? if not pps_unification_congress: <span style="color: #d61b1b;">**PPS**</span>+<span style="color: #e75656;">**PPSD**</span>: [+ pps_votes +]% ?]
 
-<span style="color: #700000;">**KPD**</span>: [+ kpd_votes +]%
+[? if pps_unification_congress: <span style="color: #d61b1b;">**PPS**</span>: [+ pps_votes +]% ?]
+
+<span style="color: #aadb37;">**PSL-Lewica**</span>: [+ psl_lewica_votes +]%
+
+<span style="color: #36722e;">**PSL "Wyzwolenie"**</span>: [+ wyzwolenie_votes +]%
+
+<span style="color: #6e0f27;">**NZR**</span>: [+ nzr_votes +]%
+
+<span style="color: #0c7060;">**PZL"**</span>: [+ pzl_votes +]%
+
+[? if not endecy_name: <span style="color: #15218f;">**NKWSD**</span>?][? if endecy_name != 0 : [+ endecy_name +]?]: [+ endecy_votes +]%
 
 [? if not lvp_formed: [? if not ddp_name: <span style="color: #D3C24D;">**DDP**</span>?][? if ddp_name != 0: <span style="color: #D3C24D;">**[+ ddp_name +]**</span>?]: [+ ddp_votes +]% ?]
 
