@@ -132,6 +132,7 @@ Q.lvp_relation = 0;
 
 Q.piast_leader = "Witos";
 Q.piast_ideology = "Agrarianism";
+
 Q.kpd_leader = "Thälmann";
 Q.z_leader = "Marx";
 Q.z_ideology = "Right";
@@ -139,6 +140,12 @@ Q.cvp_ideology = "Moderate";
 Q.stegerwald_path = 0;
 Q.nsdap_leader = "Hitler";
 Q.nsdap_chancellor = "Hitler";
+
+Q.kprp_party_name = "KPRP";
+
+Q.endecy_party_name = "NKWSD";
+Q.endecy_leader = "Dmowski";
+Q.endecy_ideology = "National Democracy";
 
 // hmm... maybe we can play nice with Hindenburg???
 Q.pilsudski_relation = 25;
