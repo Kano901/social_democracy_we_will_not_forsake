@@ -61,16 +61,16 @@ Q.dissent = 0.05;
 Q.dissent_percent = 5;
 
 // factions
-Q.factions = ['left', 'center', 'right', 'reformist', 'neorevisionist', 'social_patriot'];
+Q.factions = ['left', 'center', 'landowner', 'right', 'neorevisionist', 'social_patriot'];
 // should this be normalized to 100%?
 Q.left_strength = 35;
 Q.left_dissent = 20;
 Q.center_strength = 20;
 Q.center_dissent = 0;
-Q.right_strength = 45;
-Q.right_dissent = 5;
-Q.reformist_strength = 0;
-Q.reformist_dissent = 0;
+Q.landowner_strength = 20;
+Q.landowner_dissent = 5;
+Q.right_strength = 25;
+Q.right_dissent = 10;
 Q.neorevisionist_strength = 0;
 Q.neorevisionist_dissent = 0;
 Q.social_patriot_strength = 0

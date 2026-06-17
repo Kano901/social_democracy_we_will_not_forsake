@@ -238,13 +238,13 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the <span style="color: #20a36d;">**PSL "Piast"**</span>
 
-{!<span class="tooltip-text" title="TBA."><span style="color: #dd9e17;">Left</span></span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #dd9e17;">**Left**</span></span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="TBA."><span style="color: #3ca338;">Center</span></span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #3ca338;">**Center**</span></span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="TBA."><span style="color: #225f3a;">Right</span></span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
+{!<span class="tooltip-text" title="TBA."><span style="color: #225f3a;">**Landowner**</span></span>!} strength: [+ landowner_strength : strength +], dissent: [+ landowner_dissent : dissent +]
 
-[? if neorevisionism: {!<span class="tooltip-text" title="TBA">Neorevisionist</span>!} strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+{!<span class="tooltip-text" title="TBA"><span style="color: #2e8a7d;">**Right**</span></span>!} strength: [+ right_strength : strength +], dissent: [+ right_dissent : dissent +]
 
 @government
 
